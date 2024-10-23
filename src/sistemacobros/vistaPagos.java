@@ -56,8 +56,13 @@ public class vistaPagos extends javax.swing.JFrame {
 
         txtNcuota.setEditable(false);
 
-        txtGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bookmark.png"))); // NOI18N
+        txtGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/guardar.png"))); // NOI18N
         txtGuardar.setText("Guardar");
+        txtGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtGuardarActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel6.setText("Pagos");
@@ -117,6 +122,16 @@ public class vistaPagos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGuardarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtGuardarActionPerformed
+
+    public void limpiar(){
+        txtFpago.setText("");
+        txtMontoPago.setText("");
+        txtNcuota.setText("");
+    }
     /**
      * @param args the command line arguments
      */
